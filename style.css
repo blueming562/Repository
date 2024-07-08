@@ -69,7 +69,7 @@ nav a:hover{
 }
 /* 메인부분 시작 */
 main{
-    background-image: url(../images/coffee2.jpg);
+    background-image: url(/images/coffee2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 750px;
