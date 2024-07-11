@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            background-color: pink;
+            margin-top: 10px;
+        }
+        img{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>텍스트 추가</h1>
+    <hr>
+    <input type="text" id="text">
+    <div>
+        <button onclick="addContents()">저장</button>
+    </div>
+    <div>
+        <button onclick="addImage()">이미지 추가</button>
+    </div>
+    <ul id="list"></ul>
+
+    <script>
+        function addContents(){
+            let text = document.getElementById("text").value;
+            let newLi = document.createElement("li");
+            let textNode = document.createTextNode(text);
+            newLi.appendChild(textNode);
+            newLi.onclick = function(){
+                this.remove();
+            }
+            let list = document.querySelector("#list");
+            list.appendChild(newLi);
+        }
+
+        function addImage(){
+            let newImg = document.createElement("img");
+            let srcNode = document.createAttribute("src");
+            srcNode.value = "../images/7170113c6a983.jpg"
+            newImg.setAttributeNode(srcNode);
+            let newLi = document.createElement("li");
+            newLi.appendChild(newImg);
+            newLi.onclick = function(){
+                this.remove();
+            }
+            let list = document.querySelector("#list");
+            list.appendChild(newLi);
+        }
+    </script>
+</body>
+</html>

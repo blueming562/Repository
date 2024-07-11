@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    background-color: rgb(241, 241, 241);
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-around;
+    font-size: 15px;
+    height: 600px;
+}
+
+div {
+    /* border: 1px solid; */
+    margin-top: 85px;
+    height: 500px;
+}
+
+.membership {
+    width: 300px;
+    margin-left: 50px;
+}
+
+h4 {
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 13px;
+    color: rgb(97, 97, 97);
+    margin-bottom: 15px;
+}
+
+a {
+    font-size: 13px;
+    color: rgb(97, 97, 97);
+}
+
+button {
+    font-size: 12px;
+    font-weight: 700;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: 0;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.membership button:hover{
+    background-color: rgb(59, 59, 59);
+}
+
+.membership i {
+    margin-top: 50px;
+    margin-right: 20px;
+    color: rgb(88, 88, 88);
+    font-size: 20px;
+    padding: 5px;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+}
+
+i:hover {
+    cursor: pointer;
+    border: 1px solid gray;
+}
+
+.list {
+    width: 250px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 20px;
+    margin-right: 50px;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+ul a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.region {
+    background-color: rgb(241, 241, 241);
+    color: black;
+    border: 1px solid black;
+    margin-top: 200px;
+    margin-left: 100px;
+}
+
+.region:hover {
+    border: 2px solid black;
+}

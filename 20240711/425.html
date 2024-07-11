@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>select 객체에서 선택한 과일 출력</h1>
+    <hr>
+    <select id="sel" onchange="changePic()">
+        <option value="../images/WNhz9fPCF320veRdx261LM7m0hn1KroPjZA4LT057TwSJ_Tj5I8lH7bnY7KMawd70dlymjj_llCBDV7B6gAJQw.webp">
+            딸기
+        </option>
+        <option selected value="../images/Mj0aArUbJiq5_c500MqmbYyDPWnSiDBCsxbesdkR0XTOtDvwrjj2ponJvctbYgQ7zPE_LvjsJHAl786rZu0tkw.webp">
+            바나나
+        </option>
+        <option value="../images/QHZlaOvDdhvtLDYrA6IRvUZdddgwY9q5d0rMBywEIh7dbcNTCzTmE2CDM05JA9GRuXWqp5LsxE_T8BvGNOJhVA.webp">
+            사과
+        </option>
+    </select>
+    <div>
+        <img src="../images/Mj0aArUbJiq5_c500MqmbYyDPWnSiDBCsxbesdkR0XTOtDvwrjj2ponJvctbYgQ7zPE_LvjsJHAl786rZu0tkw.webp" id="pic">
+    </div>
+
+    <script>
+        function changePic(){
+            let sel = document.getElementById("sel");
+            let pic = document.getElementById("pic");
+
+            pic.src = sel.options[sel.selectedIndex].value;
+        }
+    </script>
+</body>
+</html>

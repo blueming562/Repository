@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            display: flex;
+        }
+        div{
+            margin: 10px;
+            padding: 5px;
+            color: white;
+            background-color: green;
+        }
+        .box1{
+            transform: rotate(20deg);
+        }
+        .box1:hover{
+            transform: rotate(80deg);
+        }
+        .box2{
+            transform: skew(0, -20deg);
+        }
+        .box2:hover{
+            transform: skew(0, -60deg);
+        }
+        .box3{
+            transform: translateY(100px);
+        }
+        .box3:hover{
+            transform: translate(50px, 100px);
+        }
+        .box4{
+            transform: scale(3, 1);
+        }
+        .box4:hover{
+            transform: scale(4, 2);
+        }
+    </style>
+</head>
+<body>
+    <h1>다양한 Transform</h1>
+    <p>아래는 회전(rotate), 기울임(skew), 이동(translate), 확대/축소(scale)가 적용된
+        사례이다. 또한 마우스를 올리면 추가적 변환이 일어난다.
+    </p>
+    <hr>
+    <section>
+        <div class="box1">rotate(20deg)</div>
+        <div class="box2">skew(0, -20deg)</div>
+        <div class="box3">translateY(100px)</div>
+        <div class="box4">scale(3, 1)</div>
+    </section>
+</body>
+</html>

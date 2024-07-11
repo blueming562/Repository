@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 이벤트</title>
+    <style>
+        #detail{
+            display: none;
+            width: 600px;
+            border: 1px solid;
+        }
+        .button{
+            display: flex;
+        }
+        button{
+            background-color: darkseagreen;
+            border: 0;
+            padding: 5px;
+            margin-right: 10px;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+        #downsize{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="item">
+        <img src="../images/7170113c6a983.jpg" width="300" id="pic"> <br>
+        <div class="button">
+            <button onclick="showDetail()" id="open">상세 설명 보기</button>
+            <button onclick="expandPic()" id="expand">사진 확대</button>
+            <button onclick="downsizePic()" id="downsize">사진 축소</button>
+        </div>
+        <div id="detail">
+            <h4>고양이</h4>
+            <p>
+                사진에 대한 내용 <br>
+                고양이는 식육목 고양이과에 속하는 포유류이다.
+                집고양이의 기원은 약 1만년 전 중동 지역에서
+                스스로 숲속을 나와 사람들이 모여사는 마을에
+                정착하여 길들여진 아프리카들고양이로 추측된다.
+                최근 고고학과 유전학의 발전에 따르면 고양이의
+                가축화는 기원전 7500년경 근동 지역에서 발생했다.
+            </p>
+            <button onclick="hideDetail()" id="close">상세 설명 닫기</button>
+        </div>
+
+        <script>
+            //상세 설명 부분을 화면에 표시
+            function showDetail(){
+                document.querySelector('#detail').style.display = "block";
+                document.querySelector('#open').style.display = "none";
+            }
+            //상세 설명 부분을 화면에서 감춤
+            function hideDetail(){
+                document.querySelector('#detail').style.display = "none";
+                document.querySelector('#open').style.display = "block";
+            }
+            function expandPic(){
+                document.querySelector('#pic').style.width = "500px";
+                document.querySelector('#expand').style.display = "none";
+                document.querySelector('#downsize').style.display = "block";
+            }
+            function downsizePic(){
+                document.querySelector('#pic').style.width = "300px";
+                document.querySelector('#downsize').style.display = "none";
+                document.querySelector('#expand').style.display = "block";
+            }
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 웹폰트 CDN */
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+        body{
+            font-family: "Nanum Gothic", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            background-color: rgb(236, 240, 247);
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+        .box{
+            /* text-align: center; */
+            background-color: white;
+            width: 375px;
+            height: 455px;
+            /* border: 1px solid; */
+            border-radius: 5px;
+            margin: 100px 20px;
+            transition: transform 0.5s;
+            /* transform-origin: top center; */
+        }
+        .box:hover{
+            cursor: pointer;
+            /* height: 480px; */
+            transform: translateY(-25px) scaleY(1.055);
+            box-shadow: 0 30px 50px gray;
+        }
+        .content{
+            padding-top: 20px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        .text1{
+            font-size: 28px;
+        }
+        .text2{
+            color: rgb(113, 113, 113);
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+        .text3{
+            color: rgb(3, 115, 228);
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .text4{
+            color: rgb(3, 115, 228);
+            font-size: 32px;
+        }
+        span{
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="content">
+                <h2 class="text1">아낌e-보금자리론</h2>
+                <h3 class="text2">0.1%p 더 저렴한 금리</h3>
+                <h3 class="text3">최대</h3>
+                <h1 class="text4">주택가격 <span>6</span>억원</h1>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <h2 class="text1">u-보금자리론</h2>
+                <h3 class="text2">우리 가족의 소중한 보금자리 마련</h3>
+                <h3 class="text3">최대</h3>
+                <h1 class="text4">대출한도 <span>3.6</span>억원</h1>
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <h2 class="text1">내집마련 디딤돌</h2>
+                <h3 class="text2">내 집 마련 꿈의 실현</h3>
+                <h3 class="text3">무주택 세대주 대상</h3>
+                <h1 class="text4">저금리 <br> 주택구입자금 대출</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            display: flex;
+        }
+        div{
+            width: 50px;
+            height: 50px;
+            border: 1px solid gray;
+            color: aliceblue;
+            text-align: center;
+            margin: 0 10px;
+            background-color: red;
+            position: relative;
+        }
+        .box2:hover{
+            background-color: green;
+            top: 20px;
+            left: 20px;
+        }
+        .box5:hover{
+            background-color: green;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>상대 배치, relative</h1>
+    h와 k 글자에 마우스를 올려 보세요
+    <hr>
+    <section>
+        <div class="box1">T</div>
+        <div class="box2">h</div>
+        <div class="box3">a</div>
+        <div class="box4">n</div>
+        <div class="box5">k</div>
+        <div class="box6">s</div>
+    </section>
+</body>
+</html>

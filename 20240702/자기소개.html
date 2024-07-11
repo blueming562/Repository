@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기소개</title>
+    <style>
+        body{
+            background-color: linen;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        h1{
+            text-align: center;
+        }
+        hr{
+            background-color: gray;
+            border: solid gray;
+        }
+        .info{
+            width: 500px;
+            background-color: rgb(199, 228, 199);
+        }
+        .interest{
+            width: 1000px;
+            background-color: lightgray;
+        }
+        .goal{
+            width: 400px;
+            background-color: khaki;
+        }
+    </style>
+    <script>
+        function show(){
+            document.getElementById("fig").src="../images/7170113c6a983.jpg"
+        }
+        function hide(){
+            document.getElementById("fig").src=""
+        }
+    </script>
+</head>
+<body>
+    <h1 onmouseover="show()" onmouseout="hide()">자기소개</h1>
+    <hr>
+    <div><img id="fig" src="" width="500px"></div>
+    <div class="info">
+        <h3>프로필</h3>
+        <p><strong>용지민</strong></p>
+        <p><strong>25세 (2000년생, 만 23세)</strong></p>
+        <p><strong>한국공학대 소프트웨어전공 4학년</strong></p>
+    </div>
+    <div class="interest">
+        <h3>취미, 관심사</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <td><img src="../images/music-1813100_1280.png" alt="음악 감상" width="200"><br>음악 감상</td>
+                    <td><img src="../images/corner-ball-6566084_1280.jpg" alt="축구" width="300"><br>축구</td>
+                    <td><img src="../images/video-game-2159117_1280.jpg" alt="게임" width="300"><br>게임</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><video src="../images/130139-746386404_small.mp4" controls width="500"></video><br>유튜브 보기</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="goal">
+        <h3>올해 목표</h3>
+        <ul>
+            <li>교육 열심히 수강</li>
+            <li>컨디션 관리</li>
+            <li>잘 놀러다니기</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1부터 5까지 더하기
+        let sum = 0;
+        sum += 1; //sum = sum + 1과 같다.
+        sum += 2;
+        sum += 3;
+        sum += 4;
+        sum += 5;
+        document.write("1부터 5까지 합 " + sum + "입니다.<br>");
+        document.write(`1부터 5까지 합 ${sum}입니다. <br>`);
+        
+        // for문으로 1부터 5까지 더하기
+        let sumFor = 0;
+            // [1초기값; 2조건; 4증가]
+        for(let i=1; i<6; i++){
+            sumFor += i; // sumFor = sumFor + i [3실행]
+        }
+        document.write(`1부터 5까지 합 ${sumFor}입니다. <br>`);
+
+        // for문을 이용해서 1000까지 더하기 - 해보기
+        let sumS = 0;
+        for(let i=1; i<1001; i++){
+            sumS += i;
+        }
+        document.write(`1부터 1000까지 합 ${sumS}입니다. <br>`);
+
+        // 1~10 숫자 중 짝수만 더하기 방법1 - 해보기
+        let sumEven = 0;
+        for(let i=0; i<11; i+=2){
+            sumEven += i;
+        }
+        document.write(`짝수더하기 ${sumEven} <br>`);
+
+        // 짝수 더하기 방법2
+        // let n = 10;
+        // let sumE = 0;
+        // for(let i=0; i<=n; i++){
+        //     if(i%2===1) //i가 홀수라면 건너뜀 //나머지가 1이면
+        //     continue; //계속하다
+        //     sumE += i; //sumE = sumE + i
+        //     document.write(`${i}-----${sumE} <br>`);
+        // }
+
+        let sumE = 0;
+        for(let i=1; i<=10; i++){
+            if(i%2===0){ // 만약에(조건)
+                sumE += i; //조건에 해당되면 실행
+                document.write(`${i}-----${sumE}<br>`);
+            }
+        }
+
+        // 별찍기 303쪽 //정수입력받아 별 문자 출력하기
+        let n = prompt("정수를 입력하세요");
+        if (isNaN(parseInt(n)) || parseInt(n) < 0){
+            document.write("잘못된 입력입니다. <br>");
+        } else{
+            for(let i=0; i<n; i++){
+                for(let j=0; j<i+1; j++){
+                    document.write("*");
+                }
+                document.write("<br>");
+            }
+        }
+
+        // 291
+        // for문은 조건식이 true인 동안 작업문을 반복하여 실행한다.
+        
+        for(let i=0; i<10; i++){
+            document.writeln(i);
+        }
+        
+        document.write("<br>");
+        // hello!를 줄바꿈으로 5번 찍기. - 해보기
+        for(let i=0; i<5; i++){
+            document.write("hello! <br>");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 태그 예제</title>
+    <style>
+        fieldset{
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        <fieldset>
+            <legend>로그인 정보</legend>
+            <label for="user-id">아이디 <input type="text" id="user-id"></label> <br>
+            <label for="user-pw">비밀번호 <input type="password" id="user-pw" size="8"></label> <input type="button" value="로그인"> <br> <br>
+        </fieldset>
+        <fieldset>
+            <legend>추가 정보</legend>
+            <label for="user-email">메일 주소 : <input type="email" id="user-email"></label> <br> <br>
+            메일 수신
+            <label for="ok">
+                <input type="radio" id="ok" name="receive" value="r_1" checked>메일 수신 동의
+            </label>
+            <label for="no">
+                <input type="radio" id="no" name="receive" value="r_2">메일 수신 거부
+            </label> <br> <br>
+            <label for="phone">연락처 : <input type="phone" id="phone" placeholder="하이픈을 빼고 입력해주세요"></label> <br>
+            <label for="birthday">생년월일 : <input type="text" id="birthday" placeholder="YYYY-MM-DD"></label> <br>
+            취미 :
+            <label for="hobby1"><input type="checkbox" id="hobby1" value="h_1">독서</label>
+            <label for="hobby2"><input type="checkbox" id="hobby2" value="h_2">음악감상</label>
+            <label for="hobby3"><input type="checkbox" id="hobby3" value="h_3">운동</label> <br> <br>
+            <label for="path">가입 경로</label>
+            <select name="" id="path">
+                <option value="">블로그</option>
+                <option value="">검색</option>
+                <option value="">SNS</option>
+                <option value="">지인추천</option>
+                <option value="">기타</option>
+            </select> <br> <br>
+            메모
+            <textarea name="" id="" cols="30" rows="10" placeholder="자유롭게 의견을 남겨주세요."></textarea>
+        </fieldset> <br>
+        <input type="submit" value="제출">
+    </form>
+</body>
+</html>

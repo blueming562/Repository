@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: aliceblue;
+            background-color: olive;
+        }
+    </style>
+</head>
+<body>
+    국어, 수학, 영어 점수를
+        입력받아 평균 점수를 나타내세요.
+    <!-- 검사 단축키 F12 또는 Ctrl+Shift+I -->
+    <script>
+        // let num = 7;
+        // if (num % 2 === 0) {
+        //     console.log("짝수");
+        // } else {
+        //     console.log("홀수");
+        // }
+
+        // 문자형을 숫자형으로 형변환
+        let kor = Number(prompt("국어 점수는?"));
+        console.log(kor);
+        let math = Number(prompt("수학 점수는?"));
+        console.log(math);
+        let eng = Number(prompt("영어 점수는?"));
+        console.log(eng);
+
+        let avg = (kor + math + eng) / 3;
+        console.log(avg);
+        document.write("<h1>평균 점수는 ? " + avg + "점입니다.</h1>");
+
+        let grade;
+        // 90점 이상 A, 80점 이상 B, 70점 이상 C, 그 외에는 F
+        if (avg >= 90) {
+            grade = "A";
+        } else if (avg >= 80) {
+            grade = "B";
+        } else if (avg >= 70) {
+            grade = "C";
+        } else {
+            grade = "F";
+        }
+        document.write(grade);
+    </script>
+</body>
+</html>

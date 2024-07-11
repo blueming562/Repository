@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>onload로 이미지 크기 출력</h1>
+    <hr>
+    <select id="sel" onchange="changePic()">
+        <option value="../images/QHZlaOvDdhvtLDYrA6IRvUZdddgwY9q5d0rMBywEIh7dbcNTCzTmE2CDM05JA9GRuXWqp5LsxE_T8BvGNOJhVA.webp">
+            사과
+        </option>
+        <option value="../images/Mj0aArUbJiq5_c500MqmbYyDPWnSiDBCsxbesdkR0XTOtDvwrjj2ponJvctbYgQ7zPE_LvjsJHAl786rZu0tkw.webp">
+            바나나
+        </option>
+        <option value="../images/3rQ5XQnLjhOC4QmrzFS40NiDGoTbVth3hP21-Cqse-PszsEQqq-6jIAWXt0jgXjsCKYZcZl1s6wxDk-a54CwFA.webp">
+            망고
+        </option>
+    </select>
+    <span id="size"></span>
+    <div>
+        <img src="../images/QHZlaOvDdhvtLDYrA6IRvUZdddgwY9q5d0rMBywEIh7dbcNTCzTmE2CDM05JA9GRuXWqp5LsxE_T8BvGNOJhVA.webp" id="pic">
+    </div>
+
+    <script>
+        function changePic(){
+            let sel = document.getElementById("sel");
+            let pic = document.getElementById("pic");
+            let size = document.getElementById("size");
+
+            pic.src = sel.options[sel.selectedIndex].value;
+
+            pic.onload = function(){
+                size.innerText = `${pic.width}x${pic.height}`;
+            }
+        }
+    </script>
+</body>
+</html>

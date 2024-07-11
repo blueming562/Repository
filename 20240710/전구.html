@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            display: flex;
+            /* flex-direction: column; */
+        }
+        div{
+            border: 1px solid;
+        }
+        img{
+            width: 300px;
+        }
+        .off{
+            display: block;
+        }
+        .on{
+            display: none;
+        }
+        .off.active{
+            display: none;
+        }
+        .on.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <!-- mouseover, mouseout -->
+        <div>
+            <h1>mouseover, mouseout</h1>
+            <img src="../images/free-icon-light-bulb-3521848.png" id="bulb1">
+        </div>
+
+        <!-- 켜기, 끄기 버튼 -->
+        <div>
+            <h1>켜기, 끄기 버튼</h1>
+            <img src="../images/free-icon-light-bulb-3521848.png" id="bulb2">
+            <button onclick="turnOn()">켜기</button>
+            <button onclick="turnOff()">끄기</button>
+        </div>
+
+        <!-- 토글 버튼 -->
+        <div>
+            <h1>토글 버튼</h1>
+            <img src="../images/free-icon-light-bulb-3521848.png" class="off">
+            <img src="../images/free-icon-light-bulb-3521815.png" class="on">
+            <button class="toggleBtn">토글</button>
+        </div>
+    </section>
+
+    <script>
+        // mouseover, mouseout
+        const $bulb1 = document.querySelector("#bulb1");
+
+        $bulb1.addEventListener("mouseover", () => {
+            $bulb1.src = "../images/free-icon-light-bulb-3521815.png";
+        })
+
+        $bulb1.addEventListener("mouseout", () => {
+            $bulb1.src = "../images/free-icon-light-bulb-3521848.png";
+        })
+
+        // 켜기, 끄기 버튼
+        const $bulb2 = document.querySelector("#bulb2");
+        function turnOn(){
+            $bulb2.src = "../images/free-icon-light-bulb-3521815.png";
+        }
+        function turnOff(){
+            $bulb2.src = "../images/free-icon-light-bulb-3521848.png";
+        }
+
+        // 토글 버튼
+        const toggleBtn = document.querySelector(".toggleBtn");
+        const off = document.querySelector(".off");
+        const on = document.querySelector(".on");
+        toggleBtn.addEventListener("click", () => {
+            off.classList.toggle("active");
+            on.classList.toggle("active");
+        })
+    </script>
+</body>
+</html>

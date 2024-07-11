@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS 스타일 동적 변경</h1>
+    <hr>
+    <p>이것은 <span>문장입니다.</span></p>
+    <button onclick="changeStyle()">스타일변경</button>
+
+    <script>
+        function changeStyle(){
+            let span = document.querySelector("span");
+            span.style.color = "green";
+            span.style.display = "block";
+            span.style.fontSize = "30px";
+            span.style.border = "2px dotted purple";
+            span.style.width = "6em";
+        }
+    </script>
+</body>
+</html>

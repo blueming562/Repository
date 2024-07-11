@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <p>addEventListener 사용</p>
+    <img src="../images/free-icon-lightbulb-702814.png" id="myImage"> <br>
+    <!-- <img src="../images/free-icon-lightbulb-702797.png" alt=""> -->
+    <button id="onBtn">켜기</button>
+    <button id="offBtn">끄기</button>
+
+    <script>
+        let myImage = document.getElementById('myImage');
+        let onBtn = document.getElementById('onBtn');
+        let offBtn = document.getElementById('offBtn');
+        // addEventListener 사용
+        onBtn.addEventListener("click", changePic1); //클릭하면 함수실행
+        offBtn.addEventListener("click", changePic2); //클릭하면 함수실행
+        // 397 동일한 이벤트 리스너에 여러 함수를 중복하여 등록할 수 있다.
+
+        function changePic1(){
+            myImage.src = "../images/free-icon-lightbulb-702797.png";
+        }
+
+        function changePic2(){
+            myImage.src = "../images/free-icon-lightbulb-702814.png";
+        }
+    </script>
+</body>
+</html>

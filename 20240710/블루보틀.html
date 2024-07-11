@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블루보틀 사이트 따라만들기</title>
+    <!-- 외부파일 css파일 연결 -->
+    <link rel="stylesheet" href="style.css">
+    <!--폰트어썸 CDN : -->
+    <script src="https://kit.fontawesome.com/4ec79785b5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <a href="#" class="menu-icon"><i class="fa-solid fa-bars"></i></a>
+        </div>
+        <div class="logo">
+            <a href="블루보틀.html"><img src="../images/logo.png" alt="bluelogo"></a>
+        </div>
+        <nav>
+            <div class="navbar">
+                <ul class="dropbtn1"> <a href="#">ABOUT</a>
+                    <div class="dropdown-content1">
+                        <a href="#"><li>Our Story</li></a>
+                        <a href="#"><li>Our Coffee</li></a>
+                        <a href="#"><li>Brew Guides</li></a>
+                    </div>
+                </ul>
+                <div>
+                    <a href="#">CAFES</a>
+                </div>
+                <ul class="dropbtn2"> <a href="#">MENU</a>
+                    <div class="dropdown-content2">
+                        <a href="#"><li>Coffee</li></a>
+                        <a href="#"><li>Merchandise</li></a>
+                    </div>
+                </ul>
+                <ul class="dropbtn3"> <a href="#">COMPANY</a>
+                    <div class="dropdown-content3">
+                        <a href="#"><li>Contact</li></a>
+                        <a href="#"><li>Careers</li></a>
+                    </div>
+                </ul>
+                <div>
+                    <a href="#">NEWS</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h2>WELCOME EVERYONE</h2>
+        <div class="ment">블루보틀에 오신 것을 <br> 환영합니다.</div>
+        <button>블루보틀 소개</button>
+        <div class="modal-box">
+            <div class="modal-contents">
+                <div class="menubar">
+                    <ul><a href="#">ABOUT</a></ul>
+                    <div><a href="#">CAFES</a></div>
+                    <ul><a href="#">MENU</a></ul>
+                    <div><a href="#">COMPANY</a></div>
+                    <ul><a href="#">NEWS</a></ul>
+                </div>
+                <div class="modal-content"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        CONNECT WITH US <br> <br>
+        <!-- <a href="#"><img src="../images/instagram.webp" alt="instagram"></a>
+        <a href="#"><img src="../images/facebook.png" alt="facebook"></a> -->
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+    </footer>
+
+    <script>
+        // const menuIcon = document.querySelector(".menu-icon");
+        const modalBox = document.querySelector(".modal-box");
+        const menu = document.querySelector(".menu");
+        const modalContent = document.querySelector(".modal-content");
+        menu.addEventListener("click", () => {
+            modalBox.classList.toggle("active");
+            menu.classList.toggle("active");
+        })
+        modalContent.addEventListener("click", () => {
+            modalBox.classList.remove("active");
+            menu.classList.remove("active");
+        })
+    </script>
+</body>
+</html>

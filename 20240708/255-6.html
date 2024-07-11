@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            display: flex;
+        }
+        div{
+            width: 300px;
+            margin: 100px;
+        }
+        .div1{
+            animation: ani1 1s infinite;
+        }
+        .div2{
+            animation: ani2 1s infinite;
+        }
+        img{
+            width: 300px;
+        }
+        @keyframes ani1 {
+            100%{transform: rotate(360deg);}
+        }
+        @keyframes ani2 {
+            50%{transform: rotate(-90deg);}
+            100%{transform: rotate(90deg);}
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="div1">
+            <img src="../images/coffee2.jpg" alt="img">
+        </div>
+        <div class="div2">
+            <img src="../images/coffee2.jpg" alt="img">
+        </div>
+    </section>
+</body>
+</html>
