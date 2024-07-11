@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--폰트어썸 CDN : -->
+    <script src="https://kit.fontawesome.com/4ec79785b5.js" crossorigin="anonymous"></script>
+    <style>
+        /* 웹폰트 CDN */
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+        *{
+            margin: 0;
+            pad: 0;
+            font-family: "Nanum Gothic", sans-serif;
+            /* font-weight: 400; */
+            font-style: normal;
+        }
+        nav{
+            height: 10vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: darkseagreen;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+        }
+        li{
+            padding: 0 15px;
+        }
+        li:hover{
+            background-color: aliceblue;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        header{
+            height: 10vh;
+        }
+        main{
+            height: 80vh;
+            background-color: beige;
+        }
+        footer{
+            height: 10vh;
+            background-color: lightblue;
+            
+        }
+        h1{
+            padding: 20px;
+        }
+        img{
+            height: 30vh;
+            margin-left: 30px;
+            border: 1px solid;
+        }
+        p{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">LoGO</a>
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="memo.html">Memo</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="github.html">Github</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Home</h1>
+        <h1>용지민의 개인 홈페이지입니다.</h1>
+        <div>
+            <img src="../images/wrtFileImageView (1).jpg">
+            <img src="../images/cat-8575641_1280.jpg">
+        </div>
+        <p>풀스택 개발자를 목표로 공부 중입니다.</p>
+        <p>아직 내용이 많이 부족한 상태지만 열심히 노력하겠습니다.</p>
+    </main>
+    <footer></footer>
+</body>
+</html>

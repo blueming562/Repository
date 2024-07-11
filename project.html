@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--폰트어썸 CDN : -->
+    <script src="https://kit.fontawesome.com/4ec79785b5.js" crossorigin="anonymous"></script>
+    <style>
+        /* 웹폰트 CDN */
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+        *{
+            margin: 0;
+            pad: 0;
+            font-family: "Nanum Gothic", sans-serif;
+            /* font-weight: 400; */
+            font-style: normal;
+        }
+        nav{
+            height: 10vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: darkseagreen;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+        }
+        li{
+            padding: 0 15px;
+        }
+        li:hover{
+            background-color: aliceblue;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        header{
+            height: 10vh;
+        }
+        main{
+            height: 80vh;
+            background-color: beige;
+        }
+        footer{
+            height: 10vh;
+            background-color: lightblue;
+            
+        }
+        h1{
+            padding: 20px;
+        }
+        .project-content{
+            height: 50vh;
+            overflow-y: scroll;
+            border: 1px solid;
+        }
+        .project-list{
+            flex-wrap: wrap;
+        }
+        .project-content a{
+            color: blue;
+            padding: 15px;
+        }
+        .project-list img{
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">LoGO</a>
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="memo.html">Memo</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="github.html">Github</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Project</h1>
+        <h1>프로젝트 페이지입니다.</h1>
+        <div class="project-content">
+            <ul class="project-list">
+                <li>
+                    <a href="../20240710/블루보틀.html" target="_blank"><p>블루보틀 사이트</p></a>
+                    <img src="../images/블루보틀.png" width="300">
+                </li>
+                <li>
+                    <a href="../20240704/이케아.html" target="_blank"><p>이케아 사이트</p></a>
+                    <img src="../images/이케아.png" width="300">
+                </li>
+                <li>
+                    <a href="../20240705/hf.html" target="_blank"><p>한국주택금융공사 사이트</p></a>
+                    <img src="../images/hf.png" width="300">
+                </li>
+            </ul>
+            <div>
+                <a href="/" target="_blank">전체 파일</a>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>
