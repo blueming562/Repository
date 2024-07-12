@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>디렉토리 리스트</h1>
+    <ul id="directory-list"></ul>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            const directories = ["20240701", "20240702", "20240703", "20240704", "20240705", "20240708", "20240709", "20240710", "20240711", "20240712"]
+            const listElement = document.getElementById("directory-list");
+
+            directories.forEach(dir => {
+                const listItem = document.createElement("li");
+                const link = document.createElement("a");
+                link.href = `../${dir}/`;
+                link.textContent = dir;
+                listItem.appendChild(link);
+                listElement.appendChild(listItem);
+            });
+        });
+    </script>
+</body>
+</html>

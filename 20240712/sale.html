@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contents{
+            display: flex;
+            align-items: center;
+            border: 1px solid;
+            padding: 15px;
+            background-color: beige;
+            border-radius: 20px;
+        }
+        img{
+            width: 200px;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+        li{
+            margin: 15px;
+        }
+        .showResult{
+            height: 100px;
+            border: 1px solid;
+            padding: 15px;
+            background-color: bisque;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contents">
+        <!-- 이미지 추가 -->
+         <div>
+            <img src="../images/house-for-sale-2845213_1280.jpg">
+        </div>
+        <form>
+            <ul>
+                <li>
+                    <label for="oPrice">원래 가격
+                    <input type="text" id="oPrice"> 원</label>
+                </li>
+                <li>
+                    <label for="rate">할인율
+                    <input type="text" id="rate"> %</label>
+                </li>
+                <li>
+                    <button onclick="showPrice()">할인 가격 계산하기</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <!-- 결과창 출력할 곳 -->
+    <div class="showResult">
+
+    </div>
+
+    <script>
+        function showPrice(){
+            event.preventDefault(); //새로고침 방지
+            let originPrice = document.getElementById("oPrice").value; //원래 가격
+            // 콘솔창에 document.getElementById("oPrice").value; 입력해보기
+            // 할인율 입력 받은 값이 얼마인지? 변수 선언
+            let rate = document.getElementById("rate").value; //할인율
+            // 할인금액 = 원래가격 * (할인율/100)
+            let savedPrice = originPrice * (rate / 100);
+            // 최종가격 = 원래가격 - 할인금액
+            let resultPrice = originPrice - savedPrice;
+            // innerHTML로 결과 div 출력
+            document.querySelector(".showResult").innerHTML = 
+            `상품의 원래 가격은 ${originPrice}원이고, 할인율은 ${rate}%입니다.
+            ${savedPrice}원을 절약한 ${resultPrice}원에 살 수 있습니다.`;
+        }
+    </script>
+</body>
+</html>

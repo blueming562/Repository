@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--폰트어썸 CDN : -->
+    <script src="https://kit.fontawesome.com/4ec79785b5.js" crossorigin="anonymous"></script>
+    <style>
+        /* 웹폰트 CDN */
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+        *{
+            margin: 0;
+            pad: 0;
+            font-family: "Nanum Gothic", sans-serif;
+            /* font-weight: 400; */
+            font-style: normal;
+        }
+        nav{
+            height: 10vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: darkseagreen;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+        }
+        li{
+            padding: 0 15px;
+        }
+        li:hover{
+            background-color: aliceblue;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        header{
+            height: 10vh;
+        }
+        main{
+            height: 80vh;
+            background-color: beige;
+        }
+        footer{
+            height: 10vh;
+            background-color: lightblue;
+        }
+        h1{
+            padding: 20px;
+        }
+        img{
+            height: 30vh;
+            border: 1px solid;
+        }
+        #memo{
+            height: 50vh;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            margin-top: 30px;
+            border: 1px solid;
+        }
+        #comment-list{
+            display: block;
+        }
+        #comment-list li{
+            background-color: lightpink;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">LoGO</a>
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="project.html">Project</a></li>
+                    <li><a href="memo.html">Memo</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="github.html">Github</a></li>
+                </ul>
+            </div>
+            <div class="icons">
+                <ul>
+                    <li><a href="#">아이콘</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Memo</h1>
+        <h1>메모를 남겨보세요.</h1>
+        <div>
+            <form>
+                <input type="text" id="text">
+                <button onclick="saveText(); return false;">저장</button>
+            </form>
+            <div id="memo">
+                <ul id="comment-list"></ul>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+
+    <script>
+        function saveText(){
+            let newLi = document.createElement("li");
+            let text = document.querySelector("#text");
+            let newTextNode = document.createTextNode(text.value);
+            newLi.appendChild(newTextNode);
+
+            let commentList = document.querySelector("#comment-list");
+            commentList.appendChild(newLi);
+            text.value = "";
+        }
+    </script>
+</body>
+</html>
